@@ -1,14 +1,12 @@
 <?php 
 
 session_start();
-$_SESSION['status']='oke';
-//session_destroy();
 
 if($_SESSION['status']!=''){
-    header('Location: views/dashboard.php');
+   include('views/dashboard.php');
     exit;
 }else{
-    header('Location: views/login.php');
+    include('views/login.php');
     exit;
 }
 
